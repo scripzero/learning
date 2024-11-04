@@ -6,6 +6,9 @@ class LecturePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MyPageView(childrens: [Text("Lecture")]);
+    return MyPageView(childrens: [
+      Image.asset("assets/img/home.jpg"),
+      Image.asset("assets/img/home2.jpg"),
+    ]);
   }
 }

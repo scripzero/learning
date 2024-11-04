@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:learning/config/app.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyCard extends StatelessWidget {
   String title;
@@ -36,7 +38,10 @@ class MyCard extends StatelessWidget {
             height: 10,
           ),
           ElevatedButton(
-              onPressed: () {}, child: Text("คลิกที่นี่เพื่อเข้าสู่บทเรียน"))
+              onPressed: () async {
+                await MyApp.launch(link, isNewTab: true);
+              },
+              child: Text("คลิกที่นี่เพื่อเข้าสู่บทเรียน"))
         ]);
   }
 }

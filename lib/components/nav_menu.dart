@@ -14,7 +14,7 @@ class NavMenu extends StatelessWidget {
         style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(Colors.transparent)),
         onPressed: () {
-          Navigator.pushNamed(context, link);
+          Navigator.popAndPushNamed(context, link);
         },
         icon: Icon(icon, color: Colors.white),
         label: Text(title, style: const TextStyle(color: Colors.white)));
