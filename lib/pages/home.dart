@@ -8,8 +8,8 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyPageView(childrens: [
-      Image.asset("img/home.jpg"),
-      Image.asset("img/home2.jpg"),
+      Image.asset("assets/img/home.jpg"),
+      Image.asset("assets/img/home2.jpg"),
       Container(
         alignment: Alignment.centerLeft,
         padding: const EdgeInsets.all(10),
