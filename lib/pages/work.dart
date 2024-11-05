@@ -6,6 +6,13 @@ class WorkPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MyPageView(childrens: [Text("ใบงาน")]);
+    return MyPageView(childrens: [
+      Image.asset("assets/img/home.jpg"),
+      Image.asset("assets/img/home2.jpg"),
+      Image.asset("assets/img/1.jpg"),
+      Image.asset("assets/img/2.jpg"),
+      Image.asset("assets/img/3.jpg"),
+      Image.asset("assets/img/4.jpg"),
+    ]);
   }
 }

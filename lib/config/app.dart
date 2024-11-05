@@ -7,8 +7,9 @@ class MyApp {
     MenuItem(title: "หน้าแรก", icon: Icons.home, link: "/"),
     MenuItem(title: "บทเรียน", icon: Icons.school, link: "/lecture"),
     MenuItem(title: "ใบงาน", icon: Icons.file_copy, link: "/work"),
+    MenuItem(title: "ครูผู้สอน", icon: Icons.edit_document, link: "/teacher"),
     MenuItem(title: "แบบทดสอบ", icon: Icons.edit_document, link: "/exam"),
-    MenuItem(title: "เพิ่มเติม", icon: Icons.star, link: "/extra"),
+    // MenuItem(title: "เพิ่มเติม", icon: Icons.star, link: "/extra"),
   ];
   static Future<void> launch(String url, {bool isNewTab = true}) async {
     if (await canLaunchUrl(Uri.parse(url))) {

@@ -5,12 +5,16 @@ import 'package:learning/config/app.dart';
 
 class MyPageView extends StatelessWidget {
   final List<Widget> childrens;
-  const MyPageView({super.key, required this.childrens});
+  final CrossAxisAlignment align;
+  const MyPageView(
+      {super.key,
+      required this.childrens,
+      this.align = CrossAxisAlignment.center});
 
   @override
   Widget build(BuildContext context) {
     var shortestSide = MediaQuery.of(context).size.shortestSide;
-    final bool isMobile = shortestSide < 600;
+    final bool isMobile = shortestSide < 720;
     Widget myDrawer() {
       return Container(
         color: Colors.white,
@@ -37,15 +41,18 @@ class MyPageView extends StatelessWidget {
           ),
           actions: isMobile ? [] : const [MyNavBar()]),
       drawer: isMobile ? myDrawer() : null,
-      body: Column(
-        children: [
-          Expanded(
-              child: SingleChildScrollView(
-            child: Column(
-              children: childrens,
-            ),
-          ))
-        ],
+      body: Center(
+        child: Column(
+          children: [
+            Expanded(
+                child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: align,
+                children: childrens,
+              ),
+            ))
+          ],
+        ),
       ),
     );
   }

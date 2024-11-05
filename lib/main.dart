@@ -5,6 +5,7 @@ import 'package:learning/pages/extra.dart';
 
 import 'package:learning/pages/home.dart';
 import 'package:learning/pages/lecture.dart';
+import 'package:learning/pages/teacher.dart';
 import 'package:learning/pages/work.dart';
 
 void main() {
@@ -23,6 +24,7 @@ class MainApp extends StatelessWidget {
         '/': (context) => const HomePage(),
         '/lecture': (context) => const LecturePage(),
         '/work': (context) => const WorkPage(),
+        '/teacher': (context) => const TeacherPage(),
         '/exam': (context) => const ExamPage(),
         '/extra': (context) => const ExtraPage(),
       },
