@@ -14,7 +14,7 @@ class MyPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var shortestSide = MediaQuery.of(context).size.shortestSide;
-    final bool isMobile = shortestSide < 720;
+    final bool isMobile = shortestSide < 600;
     Widget myDrawer() {
       return Container(
         color: Colors.white,
