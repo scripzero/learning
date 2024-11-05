@@ -20,7 +20,7 @@ class LecturePage extends StatelessWidget {
       Lecture("การใช่เทคโนโลยีสารสนเทศอย่างปลอดภัย (Canva)",
           "https://www.canva.com/design/DAGB2N3kQkY/l9gNtCBvA2gNBvktLbhSdg/edit"),
       Lecture("การใช่เทคโนโลยีสารสนเทศอย่างปลอดภัย (Powerpoint)",
-          "https://scripzero.github.io/learning/assets/assets/ppt.ptx"),
+          "https://docs.google.com/presentation/d/1cTf2_Qqne9MrS5sOPXZmZOOoSGSB6YGn/edit?usp=sharing&ouid=106755879141443651367&rtpof=true&sd=true"),
     ];
     List<Lecture> lecture_video = [
       Lecture("วิทยาการคำนวณ ม.3 l เหตุผลวิบัติ",
