@@ -9,7 +9,7 @@ class ExamPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MyPageView(childrens: [
-      Image.asset("assets/img/quiz1.jpg"),
+      Image.asset("assets/img/exam_6.png"),
       Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [

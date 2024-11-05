@@ -7,6 +7,26 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Column footerSection(String title, List<String> items) {
+      List<Widget> list = [];
+      list.add(Text(
+        title,
+        style: const TextStyle(color: Colors.white, fontSize: 18),
+      ));
+      list.add(const SizedBox(
+        height: 15,
+      ));
+
+      for (var i = 0; i < items.length; i++) {
+        list.add(Text(
+          items[i],
+          style: const TextStyle(color: Colors.white),
+        ));
+      }
+      return Column(
+          crossAxisAlignment: CrossAxisAlignment.start, children: list);
+    }
+
     return MyPageView(childrens: [
       Image.asset("assets/img/home.jpg"),
       Image.asset("assets/img/home2.jpg"),
@@ -27,9 +47,9 @@ class HomePage extends StatelessWidget {
                 Text(
                   "มาตรฐานการเรียนรู้และตัวชี้วัด",
                   style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 33,
                       color: Colors.black,
-                      fontWeight: FontWeight.bold),
+                      fontWeight: FontWeight.w500),
                 ),
                 SizedBox(
                   height: 10,
@@ -134,6 +154,32 @@ class HomePage extends StatelessWidget {
                         "เป็นการใช้ผลงานที่มีลิขสิทธิ์ (Copyright) โดยไม่กระทบกับเจ้าของลิขสิทธิ์ หรือมีข้กยกเว้นให้ใช้งานลิขสิทธิ์บางอย่างได้โดยไม่ต้องขออนุญาต"),
               )
             ])
+          ],
+        ),
+      ),
+      Container(
+        height: 200,
+        color: Colors.black,
+        padding: const EdgeInsets.only(top: 30),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            footerSection("ช่องทางการติดต่อ", [
+              "FB: tamonvan saisaard ครูเมย์",
+              "ID: may6102546",
+              "Tel: 0634461728"
+            ]),
+            const SizedBox(width: 30),
+            footerSection("Teacher", [
+              "นางสาวธมนวรรณ ใสสะอาด 6501108001036 ",
+              "กลุ่มเรียน 65016.152 คอมพิวเตอร์ศึกษา ",
+              "เบอร์โทร0634461728"
+                  "E-mail 6501108001036@student.sru.ac.th"
+            ]),
+            const SizedBox(width: 30),
+            footerSection("ช่องทางการส่งงาน",
+                ["G-mail", "Google Cassroom", "Google drive"]),
           ],
         ),
       )
