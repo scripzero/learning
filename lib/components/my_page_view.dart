@@ -43,12 +43,16 @@ class MyPageView extends StatelessWidget {
       drawer: isMobile ? myDrawer() : null,
       body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: [
             Expanded(
                 child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: align,
-                children: childrens,
+              child: SizedBox(
+                width: 1024,
+                child: Column(
+                  crossAxisAlignment: align,
+                  children: childrens,
+                ),
               ),
             ))
           ],
